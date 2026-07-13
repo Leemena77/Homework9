@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -12,73 +14,72 @@ public class Main {
             System.out.println("i = " + i);
         }
         System.out.println("Задача 1");
-        int[] inputArray1 = {15000, 22000, 18000, 25000, 12000};
-
-        double[] outputArray1 = calculatePayments(inputArray1);
-        System.out.println("inputArray1: " + Arrays.toString(inputArray1));
-        System.out.println("outputArray1: [сумма, максимум, минимум, среднее]");
-        System.out.println("outputArray1: " + Arrays.toString(outputArray1));
-        System.out.println();
-        if (array.length == 0) {
-            return new double[]{0, 0, 0, 0};
-        }
+        int[] inputArray1 = {100, 200, 300, 400, 500};
+        float[] outputArray1 = new float[4];
         int sum = 0;
-        int max = array[0];
-        int min = array[0];
-        for (int value : array) {
-            sum += value;
-            if (value > max) max = value;
-            if (value < min) min = value;
-        }
-        double average = (double) sum / array.length;
-        return new double[]{sum, max, min, average};
-        System.out.println();
-
-        System.out.println("Задача 2");
-        int[] inputArray2 = {50000, 75000, 60000, 90000, 45000};
-        double[] outputArray2 = calculateTax(inputArray2);
-        System.out.println("inputArray2: " + Arrays.toString(inputArray2));
-        System.out.println("outputArray2: " + Arrays.toString(outputArray2));
-        for (int i = 0; i < array.length; i++) {
-            result[i] = array[i] * 0.13;
-        }
-        return result;
-        System.out.println();
-
-        System.out.println("Задача 3");
-        int[] inputArray3 = {3000, 7000, 4500, 8000, 2000};
-        boolean[] outputArray3 = findBonusesAbove5000(inputArray3);
-        System.out.println("inputArray3: " + Arrays.toString(inputArray3));
-        System.out.println("outputArray3: " + Arrays.toString(outputArray3));
-        System.out.println();
-        for (int i = 0; i < array.length; i++) {
-            result[i] = array[i] > 5000;
-        }
-        return result;
-
-        System.out.println("Задача 4");
-        int[] inputArray4 = {1000, 500, 200, 300, 100};
-        boolean outputArray4 = checkCreditHistory(inputArray4);
-        System.out.println("inputArray4: " + Arrays.toString(inputArray4));
-        System.out.println("outputArray4: " + outputArray4);
-        System.out.println();
-        for (int value : array) {
-            if (value < 0) {
-                return false;
+        int maxSum = inputArray1[0];
+        int minSum = inputArray1[0];
+        for (int sumOne : inputArray1) {
+            sum += sumOne;
+            if (sumOne > maxSum) {
+                maxSum = sumOne;
             }
-            return true;
+            if (sumOne < minSum) {
+                minSum = sumOne;
+            }
+            double averageSum = (float) sum / inputArray1.length;
+            outputArray1[0] = sum;
+            outputArray1[1] = maxSum;
+            outputArray1[2] = minSum;
+            outputArray1[3] = (float) averageSum;
+            System.out.println(Arrays.toString(outputArray1));
         }
+        System.out.println("Task 2");
+        int[] inputArray2 = {100, 200, 300, 400, 500};
+        float[] outputArray2 = new float[inputArray2.length];
+        int index = 0;
+        for (int salary : inputArray2) {
+            outputArray2[index] = ((float) salary / 100) * 13;
+            index++;
+        }
+        System.out.println(Arrays.toString(outputArray2));
+    }
+    System.out.println("Task 3");
+    int[] inputArray3 = {1000, 3000, 7000, 10000, 15000};
+    boolean[] outputArray3 = new boolean[inputArray3.length];
+    int indexOne = 0;
+    for(
+    int bonus :inputArray3)
 
-        System.out.println("Задача 5");
-        int[] inputArray5 = {15000, -5000, 20000, -3000, 10000};
-        int outputArray5 = countProfitableMonths(inputArray5);
-        System.out.println("inputArray5: " + Arrays.toString(inputArray5));
-        System.out.println("outputArray5 (количество рентабельных месяцев): " + outputArray5);
-        int count = 0;
-        for(int value = array);
-        if (value > 0) {
-            count++;
+    {
+        outputArray3[indexOne] = bonus > 5000;
+        indexOne++;
+    }
+    System.out.println(Arrays.toString(inputArray3));
+    System.out.println(Arrays.toString(outputArray3));
+}
+    System.out.println("Task 4") {
+    int[] inputArray4 = {100, -1, 300, 400, 500};
+    boolean[] outputArray4 = {true};
+    for (int remain : inputArray4) {
+        if (remain < 0) {
+            outputArray4[0] = false;
+            break;
         }
-        return count;
+        System.out.println(Arrays.toString(inputArray4));
+        System.out.println(Arrays.toString(outputArray4));
+    }
+    System.out.println("Task 5");
+    int[] inputArray5 = {100, 200, 300, 400, 500};
+    int monthProfit = 0;
+    for (int profit : inputArray5) {
+        if (profit > 0) {
+            monthProfit++;
+        }
+        int[] outputArray5 = {monthProfit};
+        System.out.println("Количество прибыльных месяцев: " + Arrays.toString(outputArray5));
+        System.out.println(Arrays.toString(inputArray5));
     }
 }
+}
+
