@@ -34,7 +34,7 @@ public class Main {
             outputArray1[3] = (float) averageSum;
             System.out.println(Arrays.toString(outputArray1));
         }
-        System.out.println("Task 2");
+        System.out.println("Задача 2");
         int[] inputArray2 = {100, 200, 300, 400, 500};
         float[] outputArray2 = new float[inputArray2.length];
         int index = 0;
@@ -44,7 +44,7 @@ public class Main {
         }
         System.out.println(Arrays.toString(outputArray2));
     }
-    System.out.println("Task 3");
+    System.out.println("Задача 3");
     int[] inputArray3 = {1000, 3000, 7000, 10000, 15000};
     boolean[] outputArray3 = new boolean[inputArray3.length];
     int indexOne = 0;
@@ -58,7 +58,7 @@ public class Main {
     System.out.println(Arrays.toString(inputArray3));
     System.out.println(Arrays.toString(outputArray3));
 }
-    System.out.println("Task 4") {
+    System.out.println("Задача 4") {
     int[] inputArray4 = {100, -1, 300, 400, 500};
     boolean[] outputArray4 = {true};
     for (int remain : inputArray4) {
@@ -69,7 +69,7 @@ public class Main {
         System.out.println(Arrays.toString(inputArray4));
         System.out.println(Arrays.toString(outputArray4));
     }
-    System.out.println("Task 5");
+    System.out.println("Задача 5");
     int[] inputArray5 = {100, 200, 300, 400, 500};
     int monthProfit = 0;
     for (int profit : inputArray5) {
