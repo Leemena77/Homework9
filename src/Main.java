@@ -22,6 +22,7 @@ public class Main {
         int maxSum = inputArray1[0];
         int minSum = inputArray1[0];
         System.out.println(Arrays.toString(inputArray1));
+
         for (int sumOne : inputArray1) {
             sum += sumOne;
             if (sumOne > maxSum) {
@@ -30,8 +31,7 @@ public class Main {
             if (sumOne < minSum) {
                 minSum = sumOne;
             }
-            double averageSum = 0;
-            averageSum = (float) sum / inputArray1.length;
+            double averageSum = (float) sum / inputArray1.length;
 
             outputArray1[0] = sum;
             outputArray1[1] = maxSum;
@@ -81,9 +81,10 @@ public class Main {
             if (profit > 0) {
                 monthProfit++;
             }
-            int[] outputArray5 = {monthProfit};
+            int[] outputArray5 = new int[0];
+            outputArray5[0] = monthProfit;
             System.out.println(Arrays.toString(outputArray5));
-            System.out.println("Количество прибыльных месяцев: " + Arrays.toString(outputArray5));
+            System.out.println("Количество прибыльных месяцев: " + outputArray5[0]);
 
         }
     }
